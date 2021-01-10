@@ -12,6 +12,7 @@ def f2():
 routers = [
     ("/xxxx", f1),
     ("/oooo", f2)
+    
 ]
 
 
