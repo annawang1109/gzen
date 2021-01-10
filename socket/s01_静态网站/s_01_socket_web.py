@@ -1,18 +1,24 @@
 import socket
-from pprint import pprint
+import os
 ####
 #服务器端的本质
 ####
+
 def f1():
-    return b"f1"
+    print(os.getcwd())
+    with open('index.html', 'rb') as f:
+        data = f.read()
+    return data
 
 def f2():
-    return b"f2"
+    with open('article.html', 'rb') as f:
+        data = f.read()
+    return data
 
 routers = [
     ("/xxxx", f1),
     ("/oooo", f2)
-    
+
 ]
 
 
@@ -35,6 +41,7 @@ def run():
         print("链接地址是：",url)
         print("协议是：", protocal)
 
+        conn.send(b"HTTP/1.1 200 OK\r\n\r\n") # 如果没有这行，浏览器会显示html page source
         func_name = None
         for item in routers:
             if item[0] == url:
