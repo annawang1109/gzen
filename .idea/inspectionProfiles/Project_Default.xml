@@ -1,0 +1,20 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="test.regrtest.FAILED" />
+          <option value="card_tools" />
+          <option value="c19_01测试模块1" />
+          <option value="c19_01测试模块2" />
+          <option value="c19_02测试模块2" />
+          <option value="c19_02测试模块1" />
+          <option value="s01_B.c19_模块.c19_05import_package.c19_05a_import_package.c19_模块" />
+          <option value="s02_demo.d02_airplane.airplane_11创建敌机精灵.plane_sprites" />
+          <option value="s02_demo.d02_airplane.plane_main.plane_sprites" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
