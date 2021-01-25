@@ -2,6 +2,7 @@ import socket
 import os
 import time
 import pymysql
+from jinja2 import Template
 
 
 
@@ -40,11 +41,28 @@ def f3():
     data = template.replace("@@@wy@@@", table)
     return bytes(data, encoding="utf-8")
 
+def f4():
+    with open('jinja_list.html', 'r', encoding='utf-8') as f:
+        data = f.read()
+
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='root123456', db='znoqa')
+    cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
+    cursor.execute("select * from product_type")
+    product_list = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    print(product_list)
+
+    template = Template(data)
+    data = template.render(product_list=product_list)
+    print(data)
+    return data.encode("utf-8")
 
 routers = [
     ("/xxxx", f1),
     ("/oooo", f2),
-    ("/product_list.html", f3)
+    ("/product_list.html", f3),
+    ("/jinja_list.html", f4)
 
 ]
 

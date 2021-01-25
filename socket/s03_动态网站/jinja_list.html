@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>sku code</th>
+            <th>project id</th>
+            <th>order id</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for row in product_list %}
+            <tr>
+                <td>{{row.id}}</td>
+                <td>{{row.product_type_name}}</td>
+                <td>{{row.product_type_display}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
