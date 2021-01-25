@@ -1,0 +1,17 @@
+Python全栈（老男孩4期）Django框架入门到应用
+https://www.bilibili.com/video/BV1mW411G7g6?p=6
+
+3. 自己写网站
+a. socket 服务端（njinx）
+b. 路由系统：根据url返回不同的内容
+c. 字符串返回给用户
+    模板引擎渲染：
+        html充当模板，
+        自己创造任意数据
+     字符串
+
+ 4. web框架：
+ 框架种类：
+ - a b c：                   --> Tornado
+ - [第三方a] b c  --> wsgiref --> Django
+ - [第三方a] b [第三方c]：      --> flash
